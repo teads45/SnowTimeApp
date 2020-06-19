@@ -21,6 +21,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     
     
+    @IBSegueAction func SegueToSecondView(_ coder: NSCoder) -> viewControllerTwo? {
+        return viewControllerTwo(coder: coder)
+    }
+    
+    
     
     
     
