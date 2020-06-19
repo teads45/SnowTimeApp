@@ -16,10 +16,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var UsernameLabel: UILabel!
-    
-    
-    
-    
+  
     
     
     

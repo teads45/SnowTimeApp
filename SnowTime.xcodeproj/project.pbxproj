@@ -16,7 +16,6 @@
 		A9F02DD5249A83930047CF50 /* SnowTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F02DD4249A83930047CF50 /* SnowTimeTests.swift */; };
 		A9F02DE0249A83930047CF50 /* SnowTimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F02DDF249A83930047CF50 /* SnowTimeUITests.swift */; };
 		A9F02DF0249AB87E0047CF50 /* viewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F02DEF249AB87E0047CF50 /* viewController2.swift */; };
-		A9F02DF2249BCC0B0047CF50 /* viewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F02DF1249BCC0B0047CF50 /* viewController3.swift */; };
 		A9F02E38249C50E80047CF50 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F02E37249C50E80047CF50 /* RatingControl.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +52,6 @@
 		A9F02DDF249A83930047CF50 /* SnowTimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowTimeUITests.swift; sourceTree = "<group>"; };
 		A9F02DE1249A83930047CF50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9F02DEF249AB87E0047CF50 /* viewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewController2.swift; sourceTree = "<group>"; };
-		A9F02DF1249BCC0B0047CF50 /* viewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewController3.swift; sourceTree = "<group>"; };
 		A9F02E37249C50E80047CF50 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,7 +107,6 @@
 				A9F02DBF249A83920047CF50 /* SceneDelegate.swift */,
 				A9F02DC1249A83920047CF50 /* ViewController.swift */,
 				A9F02DEF249AB87E0047CF50 /* viewController2.swift */,
-				A9F02DF1249BCC0B0047CF50 /* viewController3.swift */,
 				A9F02E37249C50E80047CF50 /* RatingControl.swift */,
 				A9F02DC3249A83920047CF50 /* Main.storyboard */,
 				A9F02DC6249A83930047CF50 /* Assets.xcassets */,
@@ -270,7 +267,6 @@
 			files = (
 				A9F02DC2249A83920047CF50 /* ViewController.swift in Sources */,
 				A9F02DF0249AB87E0047CF50 /* viewController2.swift in Sources */,
-				A9F02DF2249BCC0B0047CF50 /* viewController3.swift in Sources */,
 				A9F02DBE249A83920047CF50 /* AppDelegate.swift in Sources */,
 				A9F02E38249C50E80047CF50 /* RatingControl.swift in Sources */,
 				A9F02DC0249A83920047CF50 /* SceneDelegate.swift in Sources */,

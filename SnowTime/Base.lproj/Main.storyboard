@@ -39,11 +39,13 @@
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <state key="normal" title="Sign In">
-                                    <color key="titleShadowColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zg5-Kx-XnP"/>
                                     <action selector="ButtonTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mae-eu-C4H"/>
+                                    <action selector="SegueTapped:" destination="thF-7b-dzZ" eventType="touchUpInside" id="Enh-qS-OAb"/>
                                     <action selector="SwitchViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jOK-xm-Vzi"/>
                                     <action selector="button2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eFe-ce-xkH"/>
                                     <action selector="segueTapped:" destination="thF-7b-dzZ" eventType="touchUpInside" id="Vdr-Qg-aLZ"/>
@@ -52,14 +54,14 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTx-HG-qop">
-                                <rect key="frame" x="54" y="229" width="207" height="57"/>
+                                <rect key="frame" x="103" y="229" width="207" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="47"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEJ-gy-Mao">
-                                <rect key="frame" x="54" y="366" width="194" height="57"/>
+                                <rect key="frame" x="110" y="366" width="194" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="47"/>
                                 <nil key="textColor"/>
@@ -78,51 +80,115 @@
                 <exit id="thF-7b-dzZ" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="5mh-KW-uuh">
                     <connections>
-                        <segue destination="MWf-ca-ZIF" kind="presentation" identifier="PhotoDetail" id="5qR-bq-Fco"/>
+                        <segue destination="MWf-ca-ZIF" kind="show" identifier="PhotoDetail" destinationCreationSelector="SignInSegue:" id="5qR-bq-Fco"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-220" y="118"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller Two-->
         <scene sceneID="MMP-Mq-dx9">
             <objects>
-                <viewController storyboardIdentifier="viewControllerTwo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MWf-ca-ZIF" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="viewControllerTwo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MWf-ca-ZIF" customClass="viewControllerTwo" customModule="SnowTime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BdB-nJ-pbK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmg-eg-1pi">
-                                <rect key="frame" x="319" y="44" width="95" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <state key="normal" title="Settings">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CWc-xg-MZj"/>
-                                    <action selector="ButtonTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NF2-bG-qix"/>
-                                    <action selector="Settings:" destination="MWf-ca-ZIF" eventType="touchUpInside" id="F67-8j-06t"/>
-                                    <action selector="button2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Eo-vQ-mGl"/>
-                                    <action selector="segueTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2h7-7b-Thw"/>
-                                    <action selector="segueTapped:" destination="thF-7b-dzZ" eventType="touchUpInside" id="UF1-r0-0gc"/>
-                                    <segue destination="lVx-jZ-xLd" kind="show" id="tZd-ts-230"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0Kt-JJ-wSn" customClass="RatingControl" customModule="SnowTime" customModuleProvider="target">
-                                <rect key="frame" x="20" y="531" width="374" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Q58-EK-1Uw" customClass="RatingControlSnow" customModule="SnowTime" customModuleProvider="target">
+                                <rect key="frame" x="75" y="459" width="264" height="44"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="starSize">
-                                        <size key="value" width="199" height="200"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="starCount">
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="starSize">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Select the importance of each variable to your ski lodge experience" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdL-FV-qx9">
+                                <rect key="frame" x="33" y="79" width="359" height="91"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="91" id="Jz8-Nb-xFA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Quality of Snow" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdW-RX-yqx" customClass="snowQualityTextLabel">
+                                <rect key="frame" x="108" y="388" width="200" height="32.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Value (price of lodge)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dbx-dm-Se6" customClass="valueTextLabel">
+                                <rect key="frame" x="92" y="178" width="247" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wait Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQr-zT-Aya" customClass="avgWaitTimeTextLabel">
+                                <rect key="frame" x="148.5" y="622" width="119" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="vdx-jS-j5I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zdu-bv-lNE" customClass="RatingControlWaitTime" customModule="SnowTime" customModuleProvider="target">
+                                <rect key="frame" x="75" y="669" width="264" height="44"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="starSize">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0Kt-JJ-wSn" customClass="RatingControlValue" customModule="SnowTime" customModuleProvider="target">
+                                <rect key="frame" x="81" y="248" width="252" height="44"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="starSize">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJe-ki-D4J">
+                                <rect key="frame" x="81" y="747" width="227" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Q58-EK-1Uw" firstAttribute="trailing" secondItem="Dbx-dm-Se6" secondAttribute="trailing" id="5qz-MY-7xH"/>
+                            <constraint firstItem="SdL-FV-qx9" firstAttribute="centerX" secondItem="Dbx-dm-Se6" secondAttribute="centerX" id="8Q3-WS-GLb"/>
+                            <constraint firstItem="Q58-EK-1Uw" firstAttribute="centerX" secondItem="BdB-nJ-pbK" secondAttribute="centerX" id="GUE-om-4az"/>
+                            <constraint firstItem="Dbx-dm-Se6" firstAttribute="leading" secondItem="xBC-ho-ByW" secondAttribute="leading" constant="92" id="LFg-og-F1S"/>
+                            <constraint firstItem="Zdu-bv-lNE" firstAttribute="top" secondItem="dQr-zT-Aya" secondAttribute="bottom" constant="8" id="NWS-BU-r1m"/>
+                            <constraint firstItem="dQr-zT-Aya" firstAttribute="leading" secondItem="xBC-ho-ByW" secondAttribute="leading" constant="148.5" id="PSy-so-Mag"/>
+                            <constraint firstItem="0Kt-JJ-wSn" firstAttribute="centerX" secondItem="Q58-EK-1Uw" secondAttribute="centerX" id="PZ8-4f-KsA"/>
+                            <constraint firstItem="xBC-ho-ByW" firstAttribute="trailing" secondItem="SdL-FV-qx9" secondAttribute="trailing" constant="17" id="TvQ-Hr-BsK"/>
+                            <constraint firstItem="Q58-EK-1Uw" firstAttribute="top" secondItem="xdW-RX-yqx" secondAttribute="bottom" constant="38.5" id="WIV-gf-mNJ"/>
+                            <constraint firstItem="xBC-ho-ByW" firstAttribute="bottom" secondItem="Zdu-bv-lNE" secondAttribute="bottom" constant="95" id="ZBF-lk-yS0"/>
+                            <constraint firstItem="Zdu-bv-lNE" firstAttribute="leading" secondItem="Q58-EK-1Uw" secondAttribute="leading" id="cok-D4-FJU"/>
+                            <constraint firstItem="0Kt-JJ-wSn" firstAttribute="top" secondItem="Dbx-dm-Se6" secondAttribute="bottom" constant="37" id="eqL-wv-Jn9"/>
+                            <constraint firstItem="xdW-RX-yqx" firstAttribute="leading" secondItem="xBC-ho-ByW" secondAttribute="leading" constant="108" id="fac-CP-ZfV"/>
+                            <constraint firstItem="Dbx-dm-Se6" firstAttribute="top" secondItem="SdL-FV-qx9" secondAttribute="bottom" constant="8" id="lHo-mX-cOb"/>
+                            <constraint firstItem="xBC-ho-ByW" firstAttribute="trailing" secondItem="xdW-RX-yqx" secondAttribute="trailing" constant="106" id="nUI-N9-BzB"/>
+                            <constraint firstItem="xdW-RX-yqx" firstAttribute="top" secondItem="0Kt-JJ-wSn" secondAttribute="bottom" constant="96" id="oYp-xl-6p6"/>
+                            <constraint firstItem="SdL-FV-qx9" firstAttribute="leading" secondItem="xBC-ho-ByW" secondAttribute="leading" constant="33" id="r7u-Sh-97Z"/>
+                            <constraint firstItem="xdW-RX-yqx" firstAttribute="centerX" secondItem="dQr-zT-Aya" secondAttribute="centerX" id="rFQ-VL-cgP"/>
+                            <constraint firstItem="0Kt-JJ-wSn" firstAttribute="leading" secondItem="xBC-ho-ByW" secondAttribute="leading" constant="81" id="tSs-v0-e7z"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xBC-ho-ByW"/>
                     </view>
                     <navigationItem key="navigationItem" id="roq-Eh-kde"/>
@@ -136,7 +202,7 @@
             <objects>
                 <viewController id="lVx-jZ-xLd" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vOt-PH-bXw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5m-VA-fDT">
