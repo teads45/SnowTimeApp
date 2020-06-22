@@ -92,11 +92,11 @@
             <objects>
                 <viewController storyboardIdentifier="viewControllerTwo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MWf-ca-ZIF" customClass="viewControllerTwo" customModule="SnowTime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BdB-nJ-pbK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Q58-EK-1Uw" customClass="RatingControlSnow" customModule="SnowTime" customModuleProvider="target">
-                                <rect key="frame" x="75" y="459" width="264" height="44"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Q58-EK-1Uw" customClass="RatingControlSnow" customModule="SnowTime" customModuleProvider="target">
+                                <rect key="frame" x="81" y="415" width="252" height="44"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="starCount">
                                         <integer key="value" value="5"/>
@@ -116,19 +116,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quality of Snow" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdW-RX-yqx" customClass="snowQualityTextLabel">
-                                <rect key="frame" x="108" y="388" width="200" height="32.5"/>
+                                <rect key="frame" x="108" y="344" width="200" height="32.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Value (price of lodge)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dbx-dm-Se6" customClass="valueTextLabel">
-                                <rect key="frame" x="92" y="178" width="247" height="33"/>
+                                <rect key="frame" x="81" y="178" width="252" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zdu-bv-lNE" customClass="RatingControlWaitTime" customModule="SnowTime" customModuleProvider="target">
-                                <rect key="frame" x="76" y="666" width="264" height="44"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zdu-bv-lNE" customClass="RatingControlWaitTime" customModule="SnowTime" customModuleProvider="target">
+                                <rect key="frame" x="81" y="615" width="252" height="44"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="starCount">
                                         <integer key="value" value="5"/>
@@ -139,7 +139,7 @@
                                 </userDefinedRuntimeAttributes>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0Kt-JJ-wSn" customClass="RatingControlValue" customModule="SnowTime" customModuleProvider="target">
-                                <rect key="frame" x="81" y="248" width="252" height="44"/>
+                                <rect key="frame" x="81" y="204" width="252" height="44"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="starCount">
                                         <integer key="value" value="5"/>
@@ -150,7 +150,8 @@
                                 </userDefinedRuntimeAttributes>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJe-ki-D4J">
-                                <rect key="frame" x="81" y="747" width="227" height="61"/>
+                                <rect key="frame" x="81" y="693" width="227" height="61"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -196,15 +197,23 @@
                         <viewLayoutGuide key="safeArea" id="xBC-ho-ByW"/>
                     </view>
                     <navigationItem key="navigationItem" id="roq-Eh-kde"/>
+                    <connections>
+                        <outlet property="avgWaitTimeTextLabel" destination="dQr-zT-Aya" id="EPo-iX-R1x"/>
+                        <outlet property="ratingControlSnow" destination="Q58-EK-1Uw" id="fiy-m8-nty"/>
+                        <outlet property="ratingControlValue" destination="0Kt-JJ-wSn" id="Daz-BQ-bKv"/>
+                        <outlet property="ratingControlWaitTime" destination="Zdu-bv-lNE" id="DHv-yr-uaj"/>
+                        <outlet property="snowQualityTextLabel" destination="xdW-RX-yqx" id="Vdy-Ub-1fD"/>
+                        <outlet property="valueTextLabel" destination="Dbx-dm-Se6" id="JAg-xL-8P0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZsE-76-f0E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="871.01449275362324" y="117.85714285714285"/>
         </scene>
-        <!--View Controller-->
+        <!--Lodges Map Page-->
         <scene sceneID="SOP-hi-lih">
             <objects>
-                <viewController id="lVx-jZ-xLd" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MKMapView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lVx-jZ-xLd" customClass="lodgesMapPage" customModule="SnowTime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vOt-PH-bXw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -216,16 +225,37 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="yFs-Ue-DQ2" userLabel="lodgesMap">
+                                <rect key="frame" x="25" y="232" width="365" height="432"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOj-1Y-eaY">
+                                <rect key="frame" x="139" y="736" width="140" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="go back"/>
+                                <connections>
+                                    <segue destination="MWf-ca-ZIF" kind="show" id="qB7-zU-luY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="eDr-PX-KWC"/>
                     </view>
                     <navigationItem key="navigationItem" id="o8C-Yt-cbn"/>
+                    <connections>
+                        <outlet property="goBackButton" destination="YOj-1Y-eaY" id="Izo-xN-eZC"/>
+                        <outlet property="lodgesMap" destination="yFs-Ue-DQ2" id="mEH-hM-Onj"/>
+                        <outlet property="matchingLodgesShown" destination="vBC-Gp-kCl" id="wIB-hE-Vep"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mh7-Ol-XAI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1800.0000000000002" y="117.85714285714285"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="qB7-zU-luY"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
 </document>
