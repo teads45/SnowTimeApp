@@ -19,14 +19,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
   
     
     
-    
+    @IBAction func createAnAccount(_ sender: Any) {
+    }
     
     @IBSegueAction func SegueToSecondView(_ coder: NSCoder) -> viewControllerTwo? {
         return viewControllerTwo(coder: coder)
     }
     
+    @IBAction func signIntoMapsPage(_ sender: Any) {
+    }
     
+    @IBAction func usernameSignUp(_ sender: Any) {
+    }
     
+    @IBAction func passwordSignUp(_ sender: Any) {
+    }
     
     
     
@@ -79,4 +86,19 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     }
         
+
 }
+
+
+
+//:MARK Sign in lodge page
+//Class SignInLodgePage:UIViewController {
+    
+    
+    
+    
+    
+    
+
+    
+//}
