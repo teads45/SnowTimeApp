@@ -22,10 +22,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func createAnAccount(_ sender: Any) {
     }
     
-    @IBSegueAction func SegueToSecondView(_ coder: NSCoder) -> viewControllerTwo? {
-        return viewControllerTwo(coder: coder)
+    @IBSegueAction func SignInToMapsPage(_ coder: NSCoder) -> lodgesMapPage? {
+        return lodgesMapPage(coder: coder)
     }
-    
+    /*@IBSegueAction func SegueToSecondView(_ coder: NSCoder) -> lodgesMapPage? {
+        return lodgesMapPage(coder: coder)
+    }
+    */
     @IBAction func signIntoMapsPage(_ sender: Any) {
     }
     

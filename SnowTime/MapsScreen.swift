@@ -26,14 +26,15 @@ class lodgesMapPage : UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.requestWhenInUseAuthorization()
+        locationManager.requestAlwaysAuthorization()
         var currentLoc: CLLocation!
         if(CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
         CLLocationManager.authorizationStatus() == .authorizedAlways) {
-           currentLoc = locationManager.location
+            currentLoc = locationManager.location ?? CLLocation(latitude: 44.1, longitude: -111)
         }
         
         let skiLodge = CLLocation(latitude: currentLoc.coordinate.latitude , longitude: currentLoc.coordinate.longitude)
-        let regionRadius: CLLocationDistance = 1000000.0
+        let regionRadius: CLLocationDistance = 800000.0
         let region = MKCoordinateRegion(center: skiLodge.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
         lodgesMap.setRegion(region, animated: false)
         lodgesMap.delegate = self

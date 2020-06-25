@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		010E3B6E24A3A9E30095AEFA /* yelpReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E3B6D24A3A9E30095AEFA /* yelpReview.swift */; };
+		010E3B7024A3AE510095AEFA /* matchStars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E3B6F24A3AE510095AEFA /* matchStars.swift */; };
 		0177ED4024A0FF4C00B60E60 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0177ED3F24A0FF4C00B60E60 /* MapKit.framework */; };
 		A9F02DBE249A83920047CF50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F02DBD249A83920047CF50 /* AppDelegate.swift */; };
 		A9F02DC0249A83920047CF50 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F02DBF249A83920047CF50 /* SceneDelegate.swift */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		010E3B6D24A3A9E30095AEFA /* yelpReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yelpReview.swift; sourceTree = "<group>"; };
+		010E3B6F24A3AE510095AEFA /* matchStars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = matchStars.swift; sourceTree = "<group>"; };
 		0177ED3F24A0FF4C00B60E60 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A9F02DBA249A83920047CF50 /* SnowTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnowTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9F02DBD249A83920047CF50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,7 +126,9 @@
 				A9F02DC1249A83920047CF50 /* ViewController.swift */,
 				A9F02DEF249AB87E0047CF50 /* viewController2.swift */,
 				A9F02E39249D36FD0047CF50 /* MapsScreen.swift */,
+				010E3B6D24A3A9E30095AEFA /* yelpReview.swift */,
 				A9F02E37249C50E80047CF50 /* RatingControl.swift */,
+				010E3B6F24A3AE510095AEFA /* matchStars.swift */,
 				A9F02DC3249A83920047CF50 /* Main.storyboard */,
 				A9F02DC6249A83930047CF50 /* Assets.xcassets */,
 				A9F02DC8249A83930047CF50 /* LaunchScreen.storyboard */,
@@ -285,7 +291,9 @@
 				A9F02DBE249A83920047CF50 /* AppDelegate.swift in Sources */,
 				A9F02E38249C50E80047CF50 /* RatingControl.swift in Sources */,
 				A9F02E3A249D36FD0047CF50 /* MapsScreen.swift in Sources */,
+				010E3B7024A3AE510095AEFA /* matchStars.swift in Sources */,
 				A9F02DC0249A83920047CF50 /* SceneDelegate.swift in Sources */,
+				010E3B6E24A3A9E30095AEFA /* yelpReview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
