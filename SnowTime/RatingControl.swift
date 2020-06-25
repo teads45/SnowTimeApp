@@ -5,7 +5,7 @@
 //  Created by Thomas Eads on 6/18/20.
 //  Copyright © 2020 Thomas Eads. All rights reserved.
 //
-
+ 
 import UIKit
 
  @IBDesignable class RatingControlValue: UIStackView{

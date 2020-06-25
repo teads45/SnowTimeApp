@@ -50,7 +50,7 @@ import UIKit
             // If the selected star represents the current rating, reset the rating to 0.
             rating = 0
         } else {
-            // Otherwise set the rating to the selected star
+             // Otherwise set the rating to the selected star
             rating = algoRating
         }
     }
