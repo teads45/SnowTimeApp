@@ -27,10 +27,11 @@ class lodgesMapPage : UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestAlwaysAuthorization()
+        _ = CLLocation(latitude: 44.1, longitude: -111.1)
         var currentLoc: CLLocation!
         if(CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
         CLLocationManager.authorizationStatus() == .authorizedAlways) {
-            currentLoc = locationManager.location ?? CLLocation(latitude: 44.1, longitude: -111)
+            currentLoc = locationManager.location
         }
         
         let skiLodge = CLLocation(latitude: currentLoc.coordinate.latitude , longitude: currentLoc.coordinate.longitude)

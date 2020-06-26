@@ -14,8 +14,8 @@
             filePath = "SnowTime/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,10 +30,118 @@
             filePath = "SnowTime/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1A55B815-617D-4ECD-A677-EEAF9B46B220"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SnowTime/MapsScreen.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "lodgesMapPage"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "1A55B815-617D-4ECD-A677-EEAF9B46B220 - 15de16f961423e0f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SnowTime.lodgesMapPage.matchingLodgesShown.getter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "SnowTime"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/thomaseads/Documents/SnowTime/SnowTime/MapsScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "1A55B815-617D-4ECD-A677-EEAF9B46B220 - a7118b9f28be9a1b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SnowTime.lodgesMapPage.matchingLodgesShown.setter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "SnowTime"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/thomaseads/Documents/SnowTime/SnowTime/MapsScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "155">
+               </Location>
+               <Location
+                  uuid = "1A55B815-617D-4ECD-A677-EEAF9B46B220 - 8ddc07559a821908"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SnowTime.lodgesMapPage.matchingLodgesShown.modify : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "SnowTime"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/thomaseads/Documents/SnowTime/SnowTime/MapsScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  uuid = "1A55B815-617D-4ECD-A677-EEAF9B46B220 - 6827047a104e5ddd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SnowTime.lodgesMapPage.matchingLodgesShown.modify : Swift.Optional&lt;__C.UILabel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "SnowTime"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/thomaseads/Documents/SnowTime/SnowTime/MapsScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "1A55B815-617D-4ECD-A677-EEAF9B46B220 - 51ba38cc147955ec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SnowTime.lodgesMapPage.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; SnowTime.lodgesMapPage"
+                  moduleName = "SnowTime"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/thomaseads/Documents/SnowTime/SnowTime/MapsScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "259">
+               </Location>
+               <Location
+                  uuid = "1A55B815-617D-4ECD-A677-EEAF9B46B220 - e00ff56b3ac627d2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SnowTime.lodgesMapPage.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;SnowTime.lodgesMapPage&gt;"
+                  moduleName = "SnowTime"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/thomaseads/Documents/SnowTime/SnowTime/MapsScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "200">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

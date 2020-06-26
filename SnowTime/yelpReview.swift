@@ -27,15 +27,11 @@ class yelpReviewTableViewCell: UITableViewCell {
      */
     }
 
-}
+
 
 
 
 //MARK: Yelp Client ID and API KEY
 /*
-Client ID
-JODMOZrCpsawbhUjvwnHuA
 
-API Key
-thbwyY1lg0-9YAYhUpKYDlSgpJhJkrZQgQv1VYUJkDljgZUlw-wKU9i_nEUeNLwF01n8S4IovCt8vTWzi1iTdjdvhJemzapfWmEWLLPhdfxbu64YXMgOGFTO8IrzXnYx
 */

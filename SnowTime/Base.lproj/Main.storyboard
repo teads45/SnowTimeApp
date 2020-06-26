@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o1K-Fy-dao">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o1K-Fy-dao">
                                 <rect key="frame" x="84" y="322" width="246" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -52,7 +52,7 @@
                                     <action selector="segueTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tTM-de-Ywl"/>
                                     <action selector="signIntoMapsPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NsY-34-TEN"/>
                                     <outletCollection property="gestureRecognizers" destination="5mh-KW-uuh" appends="YES" id="LB3-te-QWX"/>
-                                    <segue destination="lVx-jZ-xLd" kind="presentation" destinationCreationSelector="SignInToMapsPage:" modalPresentationStyle="fullScreen" id="vi5-5k-N6W"/>
+                                    <segue destination="rwo-uY-SzW" kind="presentation" destinationCreationSelector="signInSegue:" modalPresentationStyle="fullScreen" id="Rw4-AR-AeQ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTx-HG-qop">
@@ -100,7 +100,7 @@
         <!--Create Account Page-->
         <scene sceneID="pWL-AX-e0r">
             <objects>
-                <viewController id="MWK-ef-ifQ" customClass="createAccountPage" sceneMemberID="viewController">
+                <viewController id="MWK-ef-ifQ" customClass="createAccountPage" customModule="SnowTime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JlG-jX-tJ6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,6 +139,11 @@
                         <viewLayoutGuide key="safeArea" id="HmS-fc-LjQ"/>
                     </view>
                     <navigationItem key="navigationItem" id="pxQ-aX-JJF"/>
+                    <connections>
+                        <outlet property="moveToSettingsButton" destination="rag-4C-XwO" id="DoX-AM-JK4"/>
+                        <outlet property="passwordDataInput" destination="7G5-Mj-Vic" id="AK3-6y-YmD"/>
+                        <outlet property="usernameDataInput" destination="Z4f-X9-PBt" id="Jyw-B0-whL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PMu-cQ-9p9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -152,8 +157,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Q58-EK-1Uw" customClass="RatingControlSnow" customModule="SnowTime" customModuleProvider="target">
-                                <rect key="frame" x="92" y="415" width="230" height="44"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Q58-EK-1Uw" customClass="RatingControlSnow" customModule="SnowTime" customModuleProvider="target">
+                                <rect key="frame" x="81" y="415" width="252" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="starCount">
                                         <integer key="value" value="5"/>
@@ -162,6 +168,9 @@
                                         <size key="value" width="0.0" height="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="snowQualityTextLabel" destination="xdW-RX-yqx" id="ZAc-sI-N69"/>
+                                </connections>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Select the importance of each variable to your ski lodge experience" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdL-FV-qx9">
                                 <rect key="frame" x="33" y="79" width="359" height="91"/>
@@ -172,20 +181,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Quality of Snow" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdW-RX-yqx" customClass="snowQualityTextLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rating (quality)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdW-RX-yqx">
                                 <rect key="frame" x="108" y="344" width="200" height="32.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Value (price of lodge)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dbx-dm-Se6" customClass="valueTextLabel">
-                                <rect key="frame" x="81" y="178" width="252" height="33"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Price (1=cheapest)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dbx-dm-Se6">
+                                <rect key="frame" x="93" y="178" width="227" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zdu-bv-lNE" customClass="RatingControlWaitTime" customModule="SnowTime" customModuleProvider="target">
-                                <rect key="frame" x="92" y="615" width="230" height="44"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zdu-bv-lNE" customClass="RatingControlWaitTime" customModule="SnowTime" customModuleProvider="target">
+                                <rect key="frame" x="81" y="609" width="252" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="starCount">
                                         <integer key="value" value="5"/>
@@ -194,41 +205,34 @@
                                         <size key="value" width="0.0" height="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0Kt-JJ-wSn" customClass="RatingControlValue" customModule="SnowTime" customModuleProvider="target">
-                                <rect key="frame" x="148" y="204" width="118" height="44"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="starCount">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="starSize">
-                                        <size key="value" width="0.0" height="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJe-ki-D4J">
-                                <rect key="frame" x="148" y="693" width="160" height="61"/>
-                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
-                                <state key="normal" title="Continue">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
                                 <connections>
-                                    <segue destination="lVx-jZ-xLd" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="2LW-KP-TSL"/>
+                                    <outlet property="WaitTimeLabel" destination="dQr-zT-Aya" id="Uql-Cp-Ktx"/>
                                 </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Wait Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQr-zT-Aya" customClass="avgWaitTimeTextLabel">
-                                <rect key="frame" x="148" y="548" width="119" height="39"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="39" id="z4E-eE-iRf"/>
-                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0Kt-JJ-wSn" customClass="RatingControlValue" customModule="SnowTime" customModuleProvider="target">
+                                <rect key="frame" x="82" y="219" width="252" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="starSize">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="PriceRangeTextLabel" destination="Dbx-dm-Se6" id="jXW-rd-6k8"/>
+                                </connections>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distance from you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQr-zT-Aya">
+                                <rect key="frame" x="99" y="562" width="219" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qef-vh-8Ed">
-                                <rect key="frame" x="20" y="667" width="85" height="74"/>
+                                <rect key="frame" x="0.0" y="490" width="106" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="go to yelp">
@@ -238,42 +242,34 @@
                                     <segue destination="rwo-uY-SzW" kind="show" id="wiT-Fh-T1J"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJe-ki-D4J">
+                                <rect key="frame" x="132" y="697" width="160" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="lVx-jZ-xLd" kind="presentation" modalPresentationStyle="fullScreen" id="vkA-Xh-J3f"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="xBC-ho-ByW" firstAttribute="trailing" secondItem="xdW-RX-yqx" secondAttribute="trailing" constant="106" id="1zP-4w-cOI"/>
-                            <constraint firstItem="Zdu-bv-lNE" firstAttribute="top" secondItem="dQr-zT-Aya" secondAttribute="bottom" constant="28" id="BAU-pi-rdM"/>
-                            <constraint firstItem="dQr-zT-Aya" firstAttribute="leading" secondItem="xBC-ho-ByW" secondAttribute="leading" constant="148" id="EVt-QX-0ni"/>
-                            <constraint firstItem="dQr-zT-Aya" firstAttribute="centerX" secondItem="Zdu-bv-lNE" secondAttribute="centerX" id="Ega-VV-EGd"/>
-                            <constraint firstItem="Q58-EK-1Uw" firstAttribute="leading" secondItem="Zdu-bv-lNE" secondAttribute="leading" id="KOO-2q-ZGe"/>
-                            <constraint firstItem="0Kt-JJ-wSn" firstAttribute="leading" secondItem="kJe-ki-D4J" secondAttribute="leading" id="SWF-uR-Clv"/>
-                            <constraint firstItem="kJe-ki-D4J" firstAttribute="top" secondItem="Zdu-bv-lNE" secondAttribute="bottom" constant="34" id="ZoC-7k-WS7"/>
-                            <constraint firstItem="0Kt-JJ-wSn" firstAttribute="top" secondItem="Dbx-dm-Se6" secondAttribute="bottom" constant="37" id="alJ-fR-WPR"/>
-                            <constraint firstItem="xBC-ho-ByW" firstAttribute="bottom" secondItem="kJe-ki-D4J" secondAttribute="bottom" constant="54" id="fGW-u5-aOy"/>
-                            <constraint firstItem="dQr-zT-Aya" firstAttribute="centerX" secondItem="Dbx-dm-Se6" secondAttribute="centerX" id="fVM-pX-JiN"/>
-                            <constraint firstItem="xdW-RX-yqx" firstAttribute="trailing" secondItem="kJe-ki-D4J" secondAttribute="trailing" id="gs2-7b-159"/>
-                            <constraint firstItem="Dbx-dm-Se6" firstAttribute="trailing" secondItem="Q58-EK-1Uw" secondAttribute="trailing" id="i6K-SW-GTR"/>
-                            <constraint firstItem="xdW-RX-yqx" firstAttribute="leading" secondItem="xBC-ho-ByW" secondAttribute="leading" constant="108" id="jcv-cN-aTD"/>
-                            <constraint firstItem="xdW-RX-yqx" firstAttribute="top" secondItem="0Kt-JJ-wSn" secondAttribute="bottom" constant="96" id="ksj-84-eKi"/>
                             <constraint firstItem="Dbx-dm-Se6" firstAttribute="leading" secondItem="xBC-ho-ByW" secondAttribute="leading" constant="92" id="nwr-pd-NT0"/>
                             <constraint firstItem="SdL-FV-qx9" firstAttribute="leading" secondItem="xBC-ho-ByW" secondAttribute="leading" constant="33" id="nzf-us-ujK"/>
                             <constraint firstItem="Dbx-dm-Se6" firstAttribute="top" secondItem="SdL-FV-qx9" secondAttribute="bottom" constant="8" id="oPf-Nh-dzM"/>
-                            <constraint firstItem="Q58-EK-1Uw" firstAttribute="top" secondItem="xdW-RX-yqx" secondAttribute="bottom" constant="38.5" id="oQH-yd-Gz4"/>
-                            <constraint firstItem="0Kt-JJ-wSn" firstAttribute="centerX" secondItem="Q58-EK-1Uw" secondAttribute="centerX" id="pHe-aX-HZ7"/>
-                            <constraint firstItem="0Kt-JJ-wSn" firstAttribute="centerX" secondItem="BdB-nJ-pbK" secondAttribute="centerX" id="reR-NG-mxy"/>
-                            <constraint firstItem="dQr-zT-Aya" firstAttribute="centerX" secondItem="BdB-nJ-pbK" secondAttribute="centerX" id="wDA-7L-6gd"/>
                             <constraint firstItem="SdL-FV-qx9" firstAttribute="top" secondItem="xBC-ho-ByW" secondAttribute="top" constant="35" id="zzT-aX-PVE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xBC-ho-ByW"/>
                     </view>
                     <navigationItem key="navigationItem" id="roq-Eh-kde"/>
                     <connections>
-                        <outlet property="avgWaitTimeTextLabel" destination="dQr-zT-Aya" id="EPo-iX-R1x"/>
-                        <outlet property="ratingControlSnow" destination="Q58-EK-1Uw" id="fiy-m8-nty"/>
-                        <outlet property="ratingControlValue" destination="0Kt-JJ-wSn" id="Daz-BQ-bKv"/>
-                        <outlet property="ratingControlWaitTime" destination="Zdu-bv-lNE" id="DHv-yr-uaj"/>
-                        <outlet property="snowQualityTextLabel" destination="xdW-RX-yqx" id="Vdy-Ub-1fD"/>
-                        <outlet property="valueTextLabel" destination="Dbx-dm-Se6" id="JAg-xL-8P0"/>
+                        <outlet property="mainHeaderLabel" destination="SdL-FV-qx9" id="hFa-xx-Jqd"/>
+                        <outlet property="priceLabel" destination="Dbx-dm-Se6" id="jME-6q-FPM"/>
+                        <outlet property="ratingLabel" destination="xdW-RX-yqx" id="d6A-GS-v2o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZsE-76-f0E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -321,12 +317,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mh7-Ol-XAI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="792.75362318840587" y="117.85714285714285"/>
+            <point key="canvasLocation" x="714" y="-519"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Yelp Table View Controller-->
         <scene sceneID="1Jn-bH-S5y">
             <objects>
-                <tableViewController id="rwo-uY-SzW" sceneMemberID="viewController">
+                <tableViewController id="rwo-uY-SzW" customClass="yelpTableViewController" customModule="SnowTime" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Epa-bT-Cpi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -367,11 +363,11 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dtN-4y-Sce" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1640.5797101449277" y="270.53571428571428"/>
+            <point key="canvasLocation" x="1175" y="185"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vi5-5k-N6W"/>
+        <segue reference="wiT-Fh-T1J"/>
         <segue reference="qB7-zU-luY"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>

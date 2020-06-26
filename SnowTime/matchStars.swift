@@ -5,6 +5,12 @@
 //  Created by Thomas Eads on 6/24/20.
 //  Copyright © 2020 Thomas Eads. All rights reserved.
 //
+
+
+
+
+
+//MARK: For stackview match stars
 /*
 import Foundation
 import UIKit
@@ -12,7 +18,7 @@ import UIKit
  @IBDesignable class matchStars: UIStackView{
 
     //MARK: Properties
-    var
+   // var ratingMatchButtons = "hi"
     private var ratingMatchimage = [UIImage]()
      
     var rating = 0{
@@ -38,7 +44,7 @@ import UIKit
         }
     
     //MARK: Button Action
-    @objc func ratingMatchButton(button: UIButton) {
+    @objc func ratingMatchButtons(button: UIButton) {
     guard let index = ratingMatchButtons.firstIndex(of: button) else {
             fatalError("The button, \(button), is not in the ratingMatchButtons array: \(ratingMatchButtons)")
         }

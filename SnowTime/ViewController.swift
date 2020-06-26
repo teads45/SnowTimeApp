@@ -16,29 +16,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var UsernameLabel: UILabel!
-  
-    
-    
     @IBAction func createAnAccount(_ sender: Any) {
     }
-    
-    @IBSegueAction func SignInToMapsPage(_ coder: NSCoder) -> lodgesMapPage? {
-        return lodgesMapPage(coder: coder)
-    }
-    /*@IBSegueAction func SegueToSecondView(_ coder: NSCoder) -> lodgesMapPage? {
-        return lodgesMapPage(coder: coder)
-    }
-    */
-    @IBAction func signIntoMapsPage(_ sender: Any) {
-    }
-    
-    @IBAction func usernameSignUp(_ sender: Any) {
-    }
-    
-    @IBAction func passwordSignUp(_ sender: Any) {
-    }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,17 +70,3 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
 
 }
-
-
-
-//:MARK Sign in lodge page
-//Class SignInLodgePage:UIViewController {
-    
-    
-    
-    
-    
-    
-
-    
-//}

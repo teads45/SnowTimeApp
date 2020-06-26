@@ -7,12 +7,22 @@
 //
  
 import UIKit
-
- @IBDesignable class RatingControlValue: UIStackView{
+class viewControllerTwo: UIViewController {
+    
+    @IBOutlet weak var mainHeaderLabel: UILabel!
+    
+    
+    @IBOutlet weak var priceLabel: UILabel!
+    
+    
+    @IBOutlet weak var ratingLabel: UILabel!
+}
+ @IBDesignable class RatingControlValue: UIStackView {
 
     //MARK: Properties
     private var ratingButtons = [UIButton]()
-     
+    @IBOutlet weak var PriceRangeTextLabel: UILabel!
+    
     var rating = 0{
         didSet {
                updateButtonSelectionStates()
@@ -107,7 +117,8 @@ import UIKit
 
     //MARK: Properties
     private var ratingButtons = [UIButton]()
-     
+    @IBOutlet weak var snowQualityTextLabel: UILabel!
+    
     var rating = 0{
         didSet {
                updateButtonSelectionStates()
@@ -203,6 +214,7 @@ import UIKit
     //MARK: Properties
     private var ratingButtons = [UIButton]()
      
+    @IBOutlet weak var WaitTimeLabel: UILabel!
     var rating = 0{
         didSet {
                updateButtonSelectionStates()
