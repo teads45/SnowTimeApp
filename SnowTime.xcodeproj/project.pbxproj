@@ -10,6 +10,9 @@
 		010E3B6E24A3A9E30095AEFA /* yelpReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E3B6D24A3A9E30095AEFA /* yelpReview.swift */; };
 		010E3B7024A3AE510095AEFA /* matchStars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E3B6F24A3AE510095AEFA /* matchStars.swift */; };
 		0177ED4024A0FF4C00B60E60 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0177ED3F24A0FF4C00B60E60 /* MapKit.framework */; };
+		A91D53F724B4E72A007DE421 /* Lodges.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91D53F624B4E72A007DE421 /* Lodges.swift */; };
+		A91D53FB24B4F8A9007DE421 /* customCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A91D53FA24B4F8A9007DE421 /* customCell.xib */; };
+		A91D53FD24B4FECE007DE421 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91D53FC24B4FECE007DE421 /* CustomCell.swift */; };
 		A9D828CC24A674780002964B /* createAccountPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D828CB24A674780002964B /* createAccountPage.swift */; };
 		A9F02DBE249A83920047CF50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F02DBD249A83920047CF50 /* AppDelegate.swift */; };
 		A9F02DC0249A83920047CF50 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F02DBF249A83920047CF50 /* SceneDelegate.swift */; };
@@ -44,6 +47,9 @@
 		010E3B6D24A3A9E30095AEFA /* yelpReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yelpReview.swift; sourceTree = "<group>"; };
 		010E3B6F24A3AE510095AEFA /* matchStars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = matchStars.swift; sourceTree = "<group>"; };
 		0177ED3F24A0FF4C00B60E60 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A91D53F624B4E72A007DE421 /* Lodges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lodges.swift; sourceTree = "<group>"; };
+		A91D53FA24B4F8A9007DE421 /* customCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = customCell.xib; sourceTree = "<group>"; };
+		A91D53FC24B4FECE007DE421 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		A9D828CB24A674780002964B /* createAccountPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createAccountPage.swift; sourceTree = "<group>"; };
 		A9F02DBA249A83920047CF50 /* SnowTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnowTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9F02DBD249A83920047CF50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +135,9 @@
 				A9F02E39249D36FD0047CF50 /* MapsScreen.swift */,
 				A9F02DC3249A83920047CF50 /* Main.storyboard */,
 				010E3B6D24A3A9E30095AEFA /* yelpReview.swift */,
+				A91D53FA24B4F8A9007DE421 /* customCell.xib */,
+				A91D53FC24B4FECE007DE421 /* CustomCell.swift */,
+				A91D53F624B4E72A007DE421 /* Lodges.swift */,
 				010E3B6F24A3AE510095AEFA /* matchStars.swift */,
 				A9F02DC6249A83930047CF50 /* Assets.xcassets */,
 				A9F02DC8249A83930047CF50 /* LaunchScreen.storyboard */,
@@ -261,6 +270,7 @@
 			files = (
 				A9F02DCA249A83930047CF50 /* LaunchScreen.storyboard in Resources */,
 				A9F02DC7249A83930047CF50 /* Assets.xcassets in Resources */,
+				A91D53FB24B4F8A9007DE421 /* customCell.xib in Resources */,
 				A9F02DC5249A83920047CF50 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +297,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9D828CC24A674780002964B /* createAccountPage.swift in Sources */,
+				A91D53F724B4E72A007DE421 /* Lodges.swift in Sources */,
+				A91D53FD24B4FECE007DE421 /* CustomCell.swift in Sources */,
 				A9F02DC2249A83920047CF50 /* ViewController.swift in Sources */,
 				A9F02DBE249A83920047CF50 /* AppDelegate.swift in Sources */,
 				A9F02E38249C50E80047CF50 /* RatingControl.swift in Sources */,
