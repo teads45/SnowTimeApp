@@ -8,15 +8,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCell" rowHeight="251" id="emU-nZ-hMh">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" rowHeight="251" id="emU-nZ-hMh" customClass="CustomCell" customModule="SnowTime" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="476" height="251"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="emU-nZ-hMh" id="834-HK-O8B">
                 <rect key="frame" x="0.0" y="0.0" width="476" height="251"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gah-q7-YnI" customClass="UITableViewCell">
-                        <rect key="frame" x="9" y="8" width="457" height="235"/>
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gah-q7-YnI" userLabel="ParentView">
+                        <rect key="frame" x="10" y="8" width="457" height="235"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfa-ij-28N">
                                 <rect key="frame" x="16" y="86" width="54" height="21"/>
@@ -76,7 +76,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <accessibility key="accessibilityConfiguration" identifier="customCell"/>
                         <constraints>
                             <constraint firstItem="sfa-ij-28N" firstAttribute="baseline" secondItem="cGA-ke-Jh4" secondAttribute="baseline" id="08l-0S-PMD"/>
@@ -101,6 +101,16 @@
                     </view>
                 </subviews>
             </tableViewCellContentView>
+            <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="addressLabel" destination="0HW-tj-bOy" id="n3w-7I-jir"/>
+                <outlet property="distanceLabel" destination="DZO-qX-Xr8" id="kZy-bO-Cgl"/>
+                <outlet property="nameLabel" destination="NNi-04-yB0" id="Nxm-S8-gqr"/>
+                <outlet property="parentView" destination="gah-q7-YnI" id="z8S-qz-k94"/>
+                <outlet property="priceLabel" destination="IbU-Po-PnI" id="M7K-xp-e5N"/>
+                <outlet property="ratingLabel" destination="cGA-ke-Jh4" id="Lnb-7U-Eff"/>
+            </connections>
             <point key="canvasLocation" x="176.81159420289856" y="126.89732142857142"/>
         </tableViewCell>
     </objects>
