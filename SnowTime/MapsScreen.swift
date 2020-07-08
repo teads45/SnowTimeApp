@@ -25,6 +25,8 @@ class lodgesMapPage : UIViewController, MKMapViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //set up location manager
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestAlwaysAuthorization()
         _ = CLLocation(latitude: 44.1, longitude: -111.1)

@@ -7,7 +7,8 @@
 //
  
 import UIKit
-class viewControllerTwo: UIViewController {
+import CoreLocation
+class viewControllerTwo: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
     
     @IBOutlet weak var mainHeaderLabel: UILabel!
     
@@ -16,7 +17,45 @@ class viewControllerTwo: UIViewController {
     
     
     @IBOutlet weak var ratingLabel: UILabel!
+
+    @IBOutlet weak var pickerView: UIPickerView!
+    
+    let filter = ["Price", "Rating", "Distance"]
+
+// testing location services
+var locationManager = CLLocationManager()
+
+override func viewDidLoad() {
+  super.viewDidLoad()
+    pickerView.delegate = self
+    pickerView.dataSource = self
+    locationManager.requestWhenInUseAuthorization()
+
+    }
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+        
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return filter.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return filter[row]
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
  @IBDesignable class RatingControlValue: UIStackView {
 
     //MARK: Properties

@@ -13,10 +13,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
  
     
     //MARK: Properties
+   
     
+    @IBAction func segueToYelpResults(_ sender: Any) {
+    }
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var UsernameLabel: UILabel!
     @IBAction func createAnAccount(_ sender: Any) {
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         guard let destinationViewController = segue.destination
+             as? yelpTableViewController else {
+           return
+         }
     }
     
     override func viewDidLoad() {
@@ -24,35 +35,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // Handle the text field’s user input through delegate callbacks.
         //The self refers to the ViewController class, because it’s referenced inside the scope of the ViewController class definition.
         nameTextField.delegate = self
-         
-    
-        /*
-        func SwitchViewController(_ sender: Any) {
-           }
-         func usernameField(_ sender: Any) {
-             }
-             
-         func passwordField(_ sender: Any) {
-             }
-    }
-     func prepare(for segue: UIStoryboardSegue, sender: UIButton?) {
-        if segue.identifier=="PhotoDetail"{
-             let ViewController = segue.destination  as! viewControllerTwo
-            else {self.return}
-        }
-    }
-    
-    @IBAction func SwitchViewController(_ sender: Any) {
-    }
-     @IBAction func usernameField(_ sender: Any) {
-      }
-      
-      @IBAction func passwordField(_ sender: Any) {
-      }*/
-        
-        
-        
-        
         
         
     //MARK: UITextFieldDelegate

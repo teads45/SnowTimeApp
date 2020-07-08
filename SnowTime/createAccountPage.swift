@@ -8,7 +8,10 @@
 
 import Foundation
 import UIKit
-class createAccountPage: UIViewController{
+import MapKit
+import CoreLocation
+
+class createAccountPage: UIViewController {
 
 
     @IBOutlet weak var usernameDataInput: UITextField!
@@ -16,5 +19,11 @@ class createAccountPage: UIViewController{
     @IBOutlet weak var passwordDataInput: UITextField!
     @IBOutlet weak var moveToSettingsButton: UIButton!
     //insert segue here once you figure out coder stuff
+    //set up core data for each user
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
     
+        
+    }
 }

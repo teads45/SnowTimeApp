@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o1K-Fy-dao">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="JohnDoeSnowboards" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o1K-Fy-dao">
                                 <rect key="frame" x="84" y="322" width="246" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -24,7 +24,7 @@
                                     <action selector="usernameField:" destination="thF-7b-dzZ" eventType="editingDidEnd" id="07r-EW-cze"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IzO-CI-kRQ">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ILoveTheSnow" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IzO-CI-kRQ">
                                 <rect key="frame" x="84" y="431" width="246" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -43,16 +43,8 @@
                                     <color key="titleShadowColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zg5-Kx-XnP"/>
-                                    <action selector="ButtonTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mae-eu-C4H"/>
-                                    <action selector="SegueTapped:" destination="thF-7b-dzZ" eventType="touchUpInside" id="Enh-qS-OAb"/>
-                                    <action selector="SwitchViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jOK-xm-Vzi"/>
-                                    <action selector="button2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eFe-ce-xkH"/>
-                                    <action selector="segueTapped:" destination="thF-7b-dzZ" eventType="touchUpInside" id="Vdr-Qg-aLZ"/>
-                                    <action selector="segueTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tTM-de-Ywl"/>
-                                    <action selector="signIntoMapsPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NsY-34-TEN"/>
-                                    <outletCollection property="gestureRecognizers" destination="5mh-KW-uuh" appends="YES" id="LB3-te-QWX"/>
-                                    <segue destination="rwo-uY-SzW" kind="presentation" destinationCreationSelector="signInSegue:" modalPresentationStyle="fullScreen" id="Rw4-AR-AeQ"/>
+                                    <action selector="segueToYelpResults:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NQN-om-BPq"/>
+                                    <segue destination="rwo-uY-SzW" kind="show" id="fGf-Cd-gdd"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTx-HG-qop">
@@ -158,7 +150,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Q58-EK-1Uw" customClass="RatingControlSnow" customModule="SnowTime" customModuleProvider="target">
-                                <rect key="frame" x="81" y="415" width="252" height="44"/>
+                                <rect key="frame" x="82" y="342" width="252" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="starCount">
@@ -182,7 +174,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rating (quality)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdW-RX-yqx">
-                                <rect key="frame" x="108" y="344" width="200" height="32.5"/>
+                                <rect key="frame" x="109" y="271" width="200" height="32.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <nil key="textColor"/>
@@ -195,7 +187,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zdu-bv-lNE" customClass="RatingControlWaitTime" customModule="SnowTime" customModuleProvider="target">
-                                <rect key="frame" x="81" y="609" width="252" height="44"/>
+                                <rect key="frame" x="94" y="456" width="252" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="starCount">
@@ -225,7 +217,7 @@
                                 </connections>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distance from you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQr-zT-Aya">
-                                <rect key="frame" x="99" y="562" width="219" height="39"/>
+                                <rect key="frame" x="112" y="409" width="219" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <nil key="textColor"/>
@@ -255,6 +247,10 @@
                                     <segue destination="lVx-jZ-xLd" kind="presentation" modalPresentationStyle="fullScreen" id="vkA-Xh-J3f"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ylm-vQ-b0u">
+                                <rect key="frame" x="57" y="541" width="304" height="148"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -268,6 +264,7 @@
                     <navigationItem key="navigationItem" id="roq-Eh-kde"/>
                     <connections>
                         <outlet property="mainHeaderLabel" destination="SdL-FV-qx9" id="hFa-xx-Jqd"/>
+                        <outlet property="pickerView" destination="ylm-vQ-b0u" id="vXI-79-67H"/>
                         <outlet property="priceLabel" destination="Dbx-dm-Se6" id="jME-6q-FPM"/>
                         <outlet property="ratingLabel" destination="xdW-RX-yqx" id="d6A-GS-v2o"/>
                     </connections>
@@ -324,7 +321,7 @@
             <objects>
                 <tableViewController id="rwo-uY-SzW" customClass="yelpTableViewController" customModule="SnowTime" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Epa-bT-Cpi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <connections>
@@ -343,7 +340,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Rw4-AR-AeQ"/>
+        <segue reference="fGf-Cd-gdd"/>
         <segue reference="qB7-zU-luY"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
