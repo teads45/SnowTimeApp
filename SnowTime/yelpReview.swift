@@ -6,104 +6,134 @@
 //  Copyright © 2020 Thomas Eads. All rights reserved.
 //
  
+import Foundation
 import UIKit
-import MapKit
-import CoreLocation
+class yelpTableViewController: UIViewController {
+    
+        @IBOutlet weak var lodgesTableView: UITableView!
+        
+        let CPLatitude: Double = 40.1
+        let CPLongitude: Double = 111.9
+        
+        var lodge: [Lodge] = []
+          
+          override func viewDidLoad() {
+              super.viewDidLoad()
+              
+              lodgesTableView.delegate = self
+              lodgesTableView.dataSource = self
+              lodgesTableView.register(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: "customCell")
+              lodgesTableView.separatorStyle = .none
+              
+            retrieveLodges(latitude: CPLatitude, longitude: CPLongitude, category: "ski_Resorts", limit: 20, sortBy: "distance", locale: "en_US") { (response, error) in
+                              
+                              if let response = response {
+                                  self.lodge = response
+                                  DispatchQueue.main.async {
+                                      self.lodgesTableView.reloadData()
+                                  }
+                              }
+              }
+        }
+    
+}
 
-class yelpTableViewController: UIViewController{
-    
-    //set up core data for each user
 
-    // override func viewDidLoad() {
-    //     super.viewDidLoad()
+
+extension yelpTableViewController: UITableViewDelegate, UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return lodge.count
+}
+func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return 300
+}
+
+func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomCell
+    cell.nameLabel.text = lodge[indexPath.row].name
+    cell.ratingLabel.text = String(lodge[indexPath.row].rating ?? 0.0)
+    cell.priceLabel.text = lodge[indexPath.row].price ?? "-"
+    cell.addressLabel.text = lodge[indexPath.row].address
+//    cell.UrlLabel.text = lodge[indexPath.row].url
+
+    return cell
+}
+
+}
+
+
+
+
     
-             
-         
-     
-   // @IBOutlet weak var lodgesTableView: UITableView!
-    @IBOutlet weak var lodgesTableView: UITableView!
     
-    
-    
-    //coordinates for SLC, Utah
-   // let CPLatitude = skiLodge.coordinate
-   // let CPLongitude: Double = -111.928734
-    
-    var lodges: [Lodges] = []
-    var locationManager = CLLocationManager()
-     
-     override func viewDidLoad() {
-       super.viewDidLoad()
-         
-    
-   
-   _ = CLLocation(latitude: 44.1, longitude: -111.1)
-   var currentLoc: CLLocation!
-   if(CLLocationManager.authorizationStatus() == .authorizedWhenInUse) {
-       currentLoc = locationManager.location
-   }
-         let skiLodge = CLLocation(latitude: currentLoc.coordinate.latitude , longitude: currentLoc.coordinate.longitude)
-     //    let regionRadius: CLLocationDistance = 800000.0
-     //    let region = MKCoordinateRegion(center: skiLodge.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
-      //   lodgesMap.setRegion(region, animated: false)
-      //   lodgesMap.delegate = self
-     
-        
-        //coordinates for SLC, Utah
-        let CPLatitude = skiLodge.coordinate.latitude
-        let CPLongitude = skiLodge.coordinate.longitude
-        
-    
-        
-        ///above is location management and below is table management
-        
-        
-        
-        
-        
-        
-        lodgesTableView.delegate = self
-        lodgesTableView.dataSource = self
-        lodgesTableView.register(UINib(nibName:"CustomCell", bundle: nil), forCellReuseIdentifier: "customCell")
-        lodgesTableView.separatorStyle = .none
-    
-        
-        
-        ///Sort by value needs to be dynamic to meet user needs -- myArray.sorted(by: >) // [3, 2, 1]
-        /// values will be in ratingcontrol view controller
-        
-        
-        retrieveLodges(latitude: CPLatitude, longitude: CPLongitude, limit: 10, sortBy: "price", locale: "en_US", category: "Ski_Resorts") { (response, error) in
+/* override func viewDidLoad() {
+    retrieveLodges (latitude: CPLatitude, longitude: CPLongitude, limit: 20, category: "ski_Resorts", sortBy: "distance", locale: "en_US") { (response, error) in
             
             if let response = response {
-                self.lodges = response
-                DispatchQueue.main.async{
-                    self.lodgesTableView.reloadData()
-                    }
-                }
+                self.lodge = response
+            }
         }
     }
 }
-  
+*/
 
-extension yelpTableViewController: UITableViewDelegate, UITableViewDataSource {
+
+
+
+
+
+
+/*
+@IBOutlet weak var lodgesTableView: UITableView!
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomCell
-        cell.nameLabel.text = lodges[indexPath.row].name
-        cell.ratingLabel.text = String(lodges[indexPath.row].rating ?? 0.0)
-        cell.priceLabel.text = lodges[indexPath.row].price ?? "-"
-        cell.addressLabel.text = lodges[indexPath.row].address
-        return cell
-           
-       }
+    /// Central Park, NYC coordinates
+    let CPLatitude: Double = 41.782483
+    let CPLongitude: Double = -111.963540
     
-     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { return lodges.count
+    var lodges : [Lodge] = []
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
+        lodgesTableView.delegate = self
+        lodgesTableView.dataSource = self
+        lodgesTableView.register(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: "customCell")
+        lodgesTableView.separatorStyle = .none
+        
+        retrieveLodges(latitude: CPLatitude, longitude: CPLongitude, category: "gyms",
+                       limit: 20, sortBy: "distance", locale: "en_US") { (response, error) in
+                        
+                        if let response = response {
+                            self.venues = response
+                            DispatchQueue.main.async {
+                                self.venuesTableView.reloadData()
+                            }
+                        }
+        }
+    }
+}
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return Lodges.count
     }
     
-     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat { return 300
-           
-       }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 300
+    }
     
-     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomCell
+        
+        cell.nameLabel.text = Lodges[indexPath.row].name
+        cell.ratingLabel.text = String(Lodge[indexPath.row].rating ?? 0.0)
+        cell.priceLabel.text = Lodges[indexPath.row].price ?? "-"
+        cell.isClosed = Lodges[indexPath.row].is_closed ?? false
+        cell.addressLabel.text = Lodges[indexPath.row].address
+        
+        return cell
+    }
 }
+*/

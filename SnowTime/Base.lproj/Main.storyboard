@@ -149,21 +149,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Q58-EK-1Uw" customClass="RatingControlSnow" customModule="SnowTime" customModuleProvider="target">
-                                <rect key="frame" x="82" y="342" width="252" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="starCount">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="starSize">
-                                        <size key="value" width="0.0" height="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="snowQualityTextLabel" destination="xdW-RX-yqx" id="ZAc-sI-N69"/>
-                                </connections>
-                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Select the importance of each variable to your ski lodge experience" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdL-FV-qx9">
                                 <rect key="frame" x="33" y="79" width="359" height="91"/>
                                 <constraints>
@@ -173,67 +158,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rating (quality)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdW-RX-yqx">
-                                <rect key="frame" x="109" y="271" width="200" height="32.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Price (1=cheapest)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dbx-dm-Se6">
-                                <rect key="frame" x="93" y="178" width="227" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zdu-bv-lNE" customClass="RatingControlWaitTime" customModule="SnowTime" customModuleProvider="target">
-                                <rect key="frame" x="94" y="456" width="252" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="starCount">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="starSize">
-                                        <size key="value" width="0.0" height="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="WaitTimeLabel" destination="dQr-zT-Aya" id="Uql-Cp-Ktx"/>
-                                </connections>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0Kt-JJ-wSn" customClass="RatingControlValue" customModule="SnowTime" customModuleProvider="target">
-                                <rect key="frame" x="82" y="219" width="252" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="starCount">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="starSize">
-                                        <size key="value" width="0.0" height="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="PriceRangeTextLabel" destination="Dbx-dm-Se6" id="jXW-rd-6k8"/>
-                                </connections>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distance from you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQr-zT-Aya">
-                                <rect key="frame" x="112" y="409" width="219" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qef-vh-8Ed">
-                                <rect key="frame" x="0.0" y="490" width="106" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="go to yelp">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="rwo-uY-SzW" kind="show" id="wiT-Fh-T1J"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJe-ki-D4J">
                                 <rect key="frame" x="132" y="697" width="160" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -244,7 +168,7 @@
                                     <color key="titleShadowColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="lVx-jZ-xLd" kind="presentation" modalPresentationStyle="fullScreen" id="vkA-Xh-J3f"/>
+                                    <segue destination="rwo-uY-SzW" kind="show" id="ovA-X5-7J2"/>
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ylm-vQ-b0u">
@@ -254,24 +178,21 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Dbx-dm-Se6" firstAttribute="leading" secondItem="xBC-ho-ByW" secondAttribute="leading" constant="92" id="nwr-pd-NT0"/>
                             <constraint firstItem="SdL-FV-qx9" firstAttribute="leading" secondItem="xBC-ho-ByW" secondAttribute="leading" constant="33" id="nzf-us-ujK"/>
-                            <constraint firstItem="Dbx-dm-Se6" firstAttribute="top" secondItem="SdL-FV-qx9" secondAttribute="bottom" constant="8" id="oPf-Nh-dzM"/>
                             <constraint firstItem="SdL-FV-qx9" firstAttribute="top" secondItem="xBC-ho-ByW" secondAttribute="top" constant="35" id="zzT-aX-PVE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xBC-ho-ByW"/>
                     </view>
                     <navigationItem key="navigationItem" id="roq-Eh-kde"/>
                     <connections>
+                        <outlet property="goToYelp" destination="kJe-ki-D4J" id="PR9-ze-Tib"/>
                         <outlet property="mainHeaderLabel" destination="SdL-FV-qx9" id="hFa-xx-Jqd"/>
                         <outlet property="pickerView" destination="ylm-vQ-b0u" id="vXI-79-67H"/>
-                        <outlet property="priceLabel" destination="Dbx-dm-Se6" id="jME-6q-FPM"/>
-                        <outlet property="ratingLabel" destination="xdW-RX-yqx" id="d6A-GS-v2o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZsE-76-f0E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="792.75362318840587" y="894.64285714285711"/>
+            <point key="canvasLocation" x="713" y="895"/>
         </scene>
         <!--Lodges Map Page-->
         <scene sceneID="SOP-hi-lih">
@@ -336,11 +257,11 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dtN-4y-Sce" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1175" y="185"/>
+            <point key="canvasLocation" x="1607" y="162"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fGf-Cd-gdd"/>
+        <segue reference="ovA-X5-7J2"/>
         <segue reference="qB7-zU-luY"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>

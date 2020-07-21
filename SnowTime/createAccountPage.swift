@@ -13,9 +13,8 @@ import CoreLocation
 
 class createAccountPage: UIViewController {
 
-
+ 
     @IBOutlet weak var usernameDataInput: UITextField!
-    
     @IBOutlet weak var passwordDataInput: UITextField!
     @IBOutlet weak var moveToSettingsButton: UIButton!
     //insert segue here once you figure out coder stuff

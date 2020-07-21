@@ -35,6 +35,11 @@
 	<array>
 		<string>MKDirectionsModeCar</string>
 	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Allow SnowTime to use your location for best results </string>
 	<key>UIApplicationSceneManifest</key>

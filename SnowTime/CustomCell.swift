@@ -9,21 +9,21 @@
 import UIKit
 
 class CustomCell: UITableViewCell {
-
+ 
     @IBOutlet weak var parentView:UIView!
     @IBOutlet weak var nameLabel:UILabel!
     @IBOutlet weak var ratingLabel:UILabel!
     @IBOutlet weak var priceLabel:UILabel!
     @IBOutlet weak var distanceLabel:UILabel!
     @IBOutlet weak var addressLabel:UILabel!
-    
-    
+    @IBOutlet weak var UrlLabel:UILabel!
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        parentView.layer.cornerRadius = 15
+        parentView.layer.cornerRadius = 25
     }
 
-
+    
 }

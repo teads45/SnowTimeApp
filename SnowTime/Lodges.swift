@@ -7,14 +7,16 @@
 //equal to retrieve venues
 
 import Foundation
+import UIKit
 
-struct Lodges{
+struct Lodge {
 
 var name    :String?
 var rating  :Float?
 var price   :String?
 var distance    :Double?
 var address     :String?
+var url         :String?
     
 }
 

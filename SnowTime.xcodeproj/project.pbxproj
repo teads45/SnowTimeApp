@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		010E3B6E24A3A9E30095AEFA /* yelpReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E3B6D24A3A9E30095AEFA /* yelpReview.swift */; };
-		010E3B7024A3AE510095AEFA /* matchStars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E3B6F24A3AE510095AEFA /* matchStars.swift */; };
 		0177ED4024A0FF4C00B60E60 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0177ED3F24A0FF4C00B60E60 /* MapKit.framework */; };
 		A91D53F724B4E72A007DE421 /* Lodges.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91D53F624B4E72A007DE421 /* Lodges.swift */; };
 		A91D53FB24B4F8A9007DE421 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A91D53FA24B4F8A9007DE421 /* CustomCell.xib */; };
@@ -46,7 +45,6 @@
 
 /* Begin PBXFileReference section */
 		010E3B6D24A3A9E30095AEFA /* yelpReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yelpReview.swift; sourceTree = "<group>"; };
-		010E3B6F24A3AE510095AEFA /* matchStars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = matchStars.swift; sourceTree = "<group>"; };
 		0177ED3F24A0FF4C00B60E60 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A91D53F624B4E72A007DE421 /* Lodges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lodges.swift; sourceTree = "<group>"; };
 		A91D53FA24B4F8A9007DE421 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
@@ -141,7 +139,6 @@
 				A91D53FE24B51382007DE421 /* fetchYelpData.swift */,
 				A91D53FA24B4F8A9007DE421 /* CustomCell.xib */,
 				A91D53FC24B4FECE007DE421 /* CustomCell.swift */,
-				010E3B6F24A3AE510095AEFA /* matchStars.swift */,
 				A9F02DC6249A83930047CF50 /* Assets.xcassets */,
 				A9F02DC8249A83930047CF50 /* LaunchScreen.storyboard */,
 				A9F02DCB249A83930047CF50 /* Info.plist */,
@@ -306,7 +303,6 @@
 				A9F02DBE249A83920047CF50 /* AppDelegate.swift in Sources */,
 				A9F02E38249C50E80047CF50 /* RatingControl.swift in Sources */,
 				A9F02E3A249D36FD0047CF50 /* MapsScreen.swift in Sources */,
-				010E3B7024A3AE510095AEFA /* matchStars.swift in Sources */,
 				A9F02DC0249A83920047CF50 /* SceneDelegate.swift in Sources */,
 				010E3B6E24A3A9E30095AEFA /* yelpReview.swift in Sources */,
 				A91D53FF24B51382007DE421 /* fetchYelpData.swift in Sources */,

@@ -10,7 +10,7 @@ import UIKit
 
 //class MyViewController: UIViewController{}
 class ViewController: UIViewController, UITextFieldDelegate {
- 
+  
     
     //MARK: Properties
    
@@ -23,13 +23,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         guard let destinationViewController = segue.destination
+ /*   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         guard let yelpTableViewController = segue.destination
              as? yelpTableViewController else {
            return
          }
     }
-    
+    */
     override func viewDidLoad() {
         super.viewDidLoad()
         // Handle the text field’s user input through delegate callbacks.
