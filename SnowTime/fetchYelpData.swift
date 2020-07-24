@@ -7,18 +7,21 @@
 //
 
 import Foundation
-
+import MapKit
+import CoreLocation
  
 extension yelpTableViewController {
     
-      func retrieveLodges(latitude: Double,
-                            longitude: Double,
+    func retrieveLodges(latitude: CLLocationDegrees,
+                            longitude: CLLocationDegrees,
                             category: String,
                             limit: Int,
                             sortBy: String,
                             locale: String,
+                            address: String,
+                            distance: String,
                             completionHandler: @escaping ([Lodge]?, Error?) -> Void) {
-        
+
             // set up server variable as the correct server location
             let server = "http://localhost:8080"
             
@@ -49,16 +52,24 @@ extension yelpTableViewController {
             
             var lodgesList: [Lodge] = []
             
+            
+            
             //accessing each business
             for business in businesses {
+                
+            let distanceValue = business.value(forKey: distance)
+            let distanceString = "\(distanceValue ?? 0.0)"
+            //String(format: "%0.2f", arguments:[business.value(forKey: "distance")])
+                
             var lodges = Lodge()
             lodges.name = business.value(forKey: "name") as? String
             lodges.rating = business.value(forKey: "rating") as? Float
             lodges.price = business.value(forKey: "price") as? String
-            lodges.distance = business.value(forKey: "distance") as? Double
+            lodges.distance = distanceString
+          //  let distance = business.value(forKey: "distance") as? [String]
             let address = business.value(forKey: "location.display_address") as? [String]
             lodges.address = address?.joined(separator: "\n")
-            lodges.url = business.value(forKey: "url") as? String
+            //lodges.url = business.value(forKey: "url") as? String
                 
             lodgesList.append(lodges)
                 

@@ -12,7 +12,7 @@ import MapKit
 import CoreLocation
 
 class createAccountPage: UIViewController {
-
+//thomas is updating stuff
  
     @IBOutlet weak var usernameDataInput: UITextField!
     @IBOutlet weak var passwordDataInput: UITextField!

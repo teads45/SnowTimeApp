@@ -16,7 +16,8 @@ class CustomCell: UITableViewCell {
     @IBOutlet weak var priceLabel:UILabel!
     @IBOutlet weak var distanceLabel:UILabel!
     @IBOutlet weak var addressLabel:UILabel!
-    @IBOutlet weak var UrlLabel:UILabel!
+    @IBOutlet weak var lodgeImage: UIImageView!
+    
 
     
     override func awakeFromNib() {

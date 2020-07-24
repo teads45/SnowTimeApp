@@ -8,24 +8,42 @@
  
 import Foundation
 import UIKit
-class yelpTableViewController: UIViewController {
+import MapKit
+import CoreLocation
+
+
+class yelpTableViewController: UIViewController, MKMapViewDelegate {
     
         @IBOutlet weak var lodgesTableView: UITableView!
-        
-        let CPLatitude: Double = 40.1
-        let CPLongitude: Double = 111.9
+        // insert Core data to set CPLat and long
+    var locationManager = CLLocationManager()
+    
+    
         
         var lodge: [Lodge] = []
           
           override func viewDidLoad() {
               super.viewDidLoad()
-              
+            let CPLatitude = CLLocationDegrees()
+            let CPLongitude = CLLocationDegrees()
+            locationManager.requestWhenInUseAuthorization()
+            locationManager.requestAlwaysAuthorization()
+            _ = CLLocation(latitude: 44.1, longitude: -111.1)
+            var currentLoc = CLLocation(latitude: 44.1, longitude: -111.1)
+            if(CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
+            CLLocationManager.authorizationStatus() == .authorizedAlways) {
+                currentLoc = locationManager.location ?? currentLoc
+            }
+
+           
+            
+            
               lodgesTableView.delegate = self
               lodgesTableView.dataSource = self
               lodgesTableView.register(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: "customCell")
               lodgesTableView.separatorStyle = .none
               
-            retrieveLodges(latitude: CPLatitude, longitude: CPLongitude, category: "ski_Resorts", limit: 20, sortBy: "distance", locale: "en_US") { (response, error) in
+            retrieveLodges(latitude: CPLatitude, longitude: CPLongitude, category: "ski_Resorts", limit: 20, sortBy: /*filter[row]*/"price", locale: "en_US", address: "display_address", distance: "distance") { (response, error) in
                               
                               if let response = response {
                                   self.lodge = response
@@ -38,6 +56,9 @@ class yelpTableViewController: UIViewController {
     
 }
 
+
+// allows for distance to be determined
+//func distance(from: CLLocation) -> CLLocationDistance
 
 
 extension yelpTableViewController: UITableViewDelegate, UITableViewDataSource {
@@ -55,6 +76,8 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
     cell.ratingLabel.text = String(lodge[indexPath.row].rating ?? 0.0)
     cell.priceLabel.text = lodge[indexPath.row].price ?? "-"
     cell.addressLabel.text = lodge[indexPath.row].address
+    cell.distanceLabel.text = lodge[indexPath.row].distance
+    
 //    cell.UrlLabel.text = lodge[indexPath.row].url
 
     return cell
@@ -62,6 +85,9 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
 
 }
 
+    
+    
+    
 
 
 

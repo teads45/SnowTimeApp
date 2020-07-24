@@ -14,9 +14,11 @@ struct Lodge {
 var name    :String?
 var rating  :Float?
 var price   :String?
-var distance    :Double?
 var address     :String?
-var url         :String?
+var distance    :String?
+//let distance = String(format: "%0.2f", arguments:[distance])
+    
+//var url         :String?
     
 }
 
