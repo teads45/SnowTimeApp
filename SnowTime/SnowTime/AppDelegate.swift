@@ -5,7 +5,7 @@
 //  Created by Thomas Eads on 6/17/20.
 //  Copyright © 2020 Thomas Eads. All rights reserved.
 //
-
+//
 import UIKit
  
 @UIApplicationMain
@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
         return true
     }
 

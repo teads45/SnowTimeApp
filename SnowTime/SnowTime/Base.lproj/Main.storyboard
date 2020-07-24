@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o1K-Fy-dao">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="JohnDoeSnowboards" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o1K-Fy-dao">
                                 <rect key="frame" x="84" y="322" width="246" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -24,7 +24,7 @@
                                     <action selector="usernameField:" destination="thF-7b-dzZ" eventType="editingDidEnd" id="07r-EW-cze"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IzO-CI-kRQ">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ILoveTheSnow" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IzO-CI-kRQ">
                                 <rect key="frame" x="84" y="431" width="246" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -43,16 +43,8 @@
                                     <color key="titleShadowColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zg5-Kx-XnP"/>
-                                    <action selector="ButtonTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mae-eu-C4H"/>
-                                    <action selector="SegueTapped:" destination="thF-7b-dzZ" eventType="touchUpInside" id="Enh-qS-OAb"/>
-                                    <action selector="SwitchViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jOK-xm-Vzi"/>
-                                    <action selector="button2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eFe-ce-xkH"/>
-                                    <action selector="segueTapped:" destination="thF-7b-dzZ" eventType="touchUpInside" id="Vdr-Qg-aLZ"/>
-                                    <action selector="segueTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tTM-de-Ywl"/>
-                                    <action selector="signIntoMapsPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NsY-34-TEN"/>
-                                    <outletCollection property="gestureRecognizers" destination="5mh-KW-uuh" appends="YES" id="LB3-te-QWX"/>
-                                    <segue destination="rwo-uY-SzW" kind="presentation" destinationCreationSelector="signInSegue:" modalPresentationStyle="fullScreen" id="Rw4-AR-AeQ"/>
+                                    <action selector="segueToYelpResults:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NQN-om-BPq"/>
+                                    <segue destination="rwo-uY-SzW" kind="show" id="fGf-Cd-gdd"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTx-HG-qop">
@@ -157,21 +149,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Q58-EK-1Uw" customClass="RatingControlSnow" customModule="SnowTime" customModuleProvider="target">
-                                <rect key="frame" x="81" y="415" width="252" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="starCount">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="starSize">
-                                        <size key="value" width="0.0" height="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="snowQualityTextLabel" destination="xdW-RX-yqx" id="ZAc-sI-N69"/>
-                                </connections>
-                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Select the importance of each variable to your ski lodge experience" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdL-FV-qx9">
                                 <rect key="frame" x="33" y="79" width="359" height="91"/>
                                 <constraints>
@@ -181,67 +158,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rating (quality)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdW-RX-yqx">
-                                <rect key="frame" x="108" y="344" width="200" height="32.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Price (1=cheapest)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dbx-dm-Se6">
-                                <rect key="frame" x="93" y="178" width="227" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zdu-bv-lNE" customClass="RatingControlWaitTime" customModule="SnowTime" customModuleProvider="target">
-                                <rect key="frame" x="81" y="609" width="252" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="starCount">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="starSize">
-                                        <size key="value" width="0.0" height="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="WaitTimeLabel" destination="dQr-zT-Aya" id="Uql-Cp-Ktx"/>
-                                </connections>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0Kt-JJ-wSn" customClass="RatingControlValue" customModule="SnowTime" customModuleProvider="target">
-                                <rect key="frame" x="82" y="219" width="252" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="starCount">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="starSize">
-                                        <size key="value" width="0.0" height="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="PriceRangeTextLabel" destination="Dbx-dm-Se6" id="jXW-rd-6k8"/>
-                                </connections>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distance from you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQr-zT-Aya">
-                                <rect key="frame" x="99" y="562" width="219" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qef-vh-8Ed">
-                                <rect key="frame" x="0.0" y="490" width="106" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="go to yelp">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="rwo-uY-SzW" kind="show" id="wiT-Fh-T1J"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJe-ki-D4J">
                                 <rect key="frame" x="132" y="697" width="160" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -252,29 +168,31 @@
                                     <color key="titleShadowColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="lVx-jZ-xLd" kind="presentation" modalPresentationStyle="fullScreen" id="vkA-Xh-J3f"/>
+                                    <segue destination="rwo-uY-SzW" kind="show" id="ovA-X5-7J2"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ylm-vQ-b0u">
+                                <rect key="frame" x="55" y="309" width="304" height="148"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Dbx-dm-Se6" firstAttribute="leading" secondItem="xBC-ho-ByW" secondAttribute="leading" constant="92" id="nwr-pd-NT0"/>
                             <constraint firstItem="SdL-FV-qx9" firstAttribute="leading" secondItem="xBC-ho-ByW" secondAttribute="leading" constant="33" id="nzf-us-ujK"/>
-                            <constraint firstItem="Dbx-dm-Se6" firstAttribute="top" secondItem="SdL-FV-qx9" secondAttribute="bottom" constant="8" id="oPf-Nh-dzM"/>
                             <constraint firstItem="SdL-FV-qx9" firstAttribute="top" secondItem="xBC-ho-ByW" secondAttribute="top" constant="35" id="zzT-aX-PVE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xBC-ho-ByW"/>
                     </view>
                     <navigationItem key="navigationItem" id="roq-Eh-kde"/>
                     <connections>
+                        <outlet property="goToYelp" destination="kJe-ki-D4J" id="PR9-ze-Tib"/>
                         <outlet property="mainHeaderLabel" destination="SdL-FV-qx9" id="hFa-xx-Jqd"/>
-                        <outlet property="priceLabel" destination="Dbx-dm-Se6" id="jME-6q-FPM"/>
-                        <outlet property="ratingLabel" destination="xdW-RX-yqx" id="d6A-GS-v2o"/>
+                        <outlet property="pickerView" destination="ylm-vQ-b0u" id="vXI-79-67H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZsE-76-f0E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="792.75362318840587" y="894.64285714285711"/>
+            <point key="canvasLocation" x="713" y="895"/>
         </scene>
         <!--Lodges Map Page-->
         <scene sceneID="SOP-hi-lih">
@@ -324,179 +242,27 @@
             <objects>
                 <tableViewController id="rwo-uY-SzW" customClass="yelpTableViewController" customModule="SnowTime" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Epa-bT-Cpi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="90" id="GGv-lO-c3M" customClass="yelpReviewTableViewCell" customModule="SnowTime" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="90"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GGv-lO-c3M" id="JTT-Y0-A8M" customClass="matchStars" customModule="SnowTime" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="E70-3S-R7F">
-                                            <rect key="frame" x="0.0" y="0.0" width="120" height="90"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name/star match" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TeP-K6-w0Y">
-                                            <rect key="frame" x="128" y="11" width="130" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cdQ-nj-h9b">
-                                            <rect key="frame" x="128" y="29" width="252" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </stackView>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="LodgeDescription" destination="TeP-K6-w0Y" id="Bek-LM-6jC"/>
-                                    <outlet property="LodgeMatchRating" destination="cdQ-nj-h9b" id="r3Y-Kg-2Oj"/>
-                                    <outlet property="imageViewForLodge" destination="E70-3S-R7F" id="YtN-d7-0m2"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="90" id="qf1-Aw-4ZS" customClass="yelpReviewTableViewCell" customModule="SnowTime" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="118" width="414" height="90"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qf1-Aw-4ZS" id="TJl-Im-A83" customClass="matchStars" customModule="SnowTime" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ipp-Jo-oCh">
-                                            <rect key="frame" x="0.0" y="0.0" width="120" height="90"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name/star match" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjO-Qv-ghb">
-                                            <rect key="frame" x="128" y="11" width="130" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qIl-x0-W5X">
-                                            <rect key="frame" x="128" y="29" width="252" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </stackView>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="LodgeDescription" destination="yjO-Qv-ghb" id="Pn9-GI-xoZ"/>
-                                    <outlet property="LodgeMatchRating" destination="qIl-x0-W5X" id="wEt-Zm-G8I"/>
-                                    <outlet property="imageViewForLodge" destination="ipp-Jo-oCh" id="TH2-GE-PsV"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="90" id="cgs-aT-rzG" customClass="yelpReviewTableViewCell" customModule="SnowTime" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="208" width="414" height="90"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cgs-aT-rzG" id="JzK-DC-omO" customClass="matchStars" customModule="SnowTime" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="C23-rQ-Iyj">
-                                            <rect key="frame" x="0.0" y="0.0" width="120" height="90"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name/star match" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ort-AO-LZ3">
-                                            <rect key="frame" x="128" y="11" width="130" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cIr-bN-toh">
-                                            <rect key="frame" x="128" y="29" width="252" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </stackView>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="LodgeDescription" destination="ort-AO-LZ3" id="di0-8E-QfO"/>
-                                    <outlet property="LodgeMatchRating" destination="cIr-bN-toh" id="ab7-f2-d2Y"/>
-                                    <outlet property="imageViewForLodge" destination="C23-rQ-Iyj" id="JAd-xU-1CV"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="90" id="HFp-7R-B8s" customClass="yelpReviewTableViewCell" customModule="SnowTime" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="298" width="414" height="90"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HFp-7R-B8s" id="rY0-Sl-FFR" customClass="matchStars" customModule="SnowTime" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="4hG-ds-H03">
-                                            <rect key="frame" x="0.0" y="0.0" width="120" height="90"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name/star match" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DD7-ic-l7A">
-                                            <rect key="frame" x="128" y="11" width="130" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w1r-U4-4Fy">
-                                            <rect key="frame" x="128" y="29" width="252" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </stackView>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="LodgeDescription" destination="DD7-ic-l7A" id="KaF-uA-dxX"/>
-                                    <outlet property="LodgeMatchRating" destination="w1r-U4-4Fy" id="2Rs-zP-kqx"/>
-                                    <outlet property="imageViewForLodge" destination="4hG-ds-H03" id="hX5-1j-efB"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="90" id="RUH-ey-ye4" customClass="yelpReviewTableViewCell" customModule="SnowTime" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="388" width="414" height="90"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RUH-ey-ye4" id="uKf-Sj-uZP" customClass="matchStars" customModule="SnowTime" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="8fu-ND-LpH">
-                                            <rect key="frame" x="0.0" y="0.0" width="120" height="90"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name/star match" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKf-1S-Cr4">
-                                            <rect key="frame" x="128" y="11" width="130" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6bS-ER-yT6">
-                                            <rect key="frame" x="128" y="29" width="252" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </stackView>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="LodgeDescription" destination="SKf-1S-Cr4" id="OEb-JF-G6Y"/>
-                                    <outlet property="LodgeMatchRating" destination="6bS-ER-yT6" id="7X4-lu-KrR"/>
-                                    <outlet property="imageViewForLodge" destination="8fu-ND-LpH" id="mf4-Kt-JLR"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="rwo-uY-SzW" id="y7w-Xz-cbZ"/>
                             <outlet property="delegate" destination="rwo-uY-SzW" id="5Yi-SB-Kw5"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="UJ2-wD-ZGG"/>
+                    <connections>
+                        <outlet property="lodgesTableView" destination="Epa-bT-Cpi" id="5wG-Db-5vq"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dtN-4y-Sce" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2061" y="110"/>
+            <point key="canvasLocation" x="1607" y="162"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Rw4-AR-AeQ"/>
+        <segue reference="ovA-X5-7J2"/>
         <segue reference="qB7-zU-luY"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
-    <resources>
-        <image name="AppLogo" width="525" height="300"/>
-    </resources>
 </document>
