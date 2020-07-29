@@ -106,17 +106,6 @@
                                     <action selector="passwordSignUp:" destination="MWK-ef-ifQ" eventType="editingDidEnd" id="emQ-TG-ISB"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rag-4C-XwO">
-                                <rect key="frame" x="61" y="574" width="333" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <state key="normal" title="Let's find some snow!">
-                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="MWf-ca-ZIF" kind="show" id="7kl-YB-db6"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Input Username" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z4f-X9-PBt">
                                 <rect key="frame" x="78" y="297" width="264" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -126,6 +115,17 @@
                                     <action selector="usernameSignUp:" destination="MWK-ef-ifQ" eventType="editingDidEnd" id="abR-sl-QyW"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rag-4C-XwO">
+                                <rect key="frame" x="41" y="570" width="333" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <state key="normal" title="Let's find some snow!">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hbD-Rf-RB9" kind="presentation" modalPresentationStyle="fullScreen" id="7kl-YB-db6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="HmS-fc-LjQ"/>
@@ -141,7 +141,7 @@
             </objects>
             <point key="canvasLocation" x="-220" y="895"/>
         </scene>
-        <!--View Controller Two-->
+        <!--Settings-->
         <scene sceneID="MMP-Mq-dx9">
             <objects>
                 <viewController storyboardIdentifier="viewControllerTwo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MWf-ca-ZIF" customClass="viewControllerTwo" customModule="SnowTime" customModuleProvider="target" sceneMemberID="viewController">
@@ -149,8 +149,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Select the importance of each variable to your ski lodge experience" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdL-FV-qx9">
-                                <rect key="frame" x="33" y="79" width="359" height="91"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Select the criteria to sort results by" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdL-FV-qx9">
+                                <rect key="frame" x="33" y="79" width="359" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="91" id="TVI-ew-Pis"/>
                                 </constraints>
@@ -159,22 +159,55 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJe-ki-D4J">
-                                <rect key="frame" x="132" y="697" width="160" height="61"/>
+                                <rect key="frame" x="104" y="751" width="216" height="91"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="rwo-uY-SzW" kind="show" id="ovA-X5-7J2"/>
+                                    <action selector="continueButtonAction:" destination="MWf-ca-ZIF" eventType="touchUpInside" id="zHK-2g-rGn"/>
+                                    <segue destination="rwo-uY-SzW" kind="presentation" modalPresentationStyle="fullScreen" id="aSD-BD-yIa"/>
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ylm-vQ-b0u">
-                                <rect key="frame" x="55" y="309" width="304" height="148"/>
+                                <rect key="frame" x="55" y="171" width="304" height="148"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5y-xx-1f0">
+                                <rect key="frame" x="110" y="663" width="210" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Reset Password">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Click below to reset your password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXc-lj-Mmp">
+                                <rect key="frame" x="33" y="590" width="359" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ero-PS-HTZ">
+                                <rect key="frame" x="136" y="477" width="148" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Miles"/>
+                                    <segment title="Km"/>
+                                </segments>
+                                <connections>
+                                    <action selector="distanceSlider:" destination="MWf-ca-ZIF" eventType="valueChanged" id="XIU-zU-XKF"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose below imperial or metric" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YgL-1Z-um7">
+                                <rect key="frame" x="36" y="389" width="359" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -183,16 +216,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xBC-ho-ByW"/>
                     </view>
-                    <navigationItem key="navigationItem" id="roq-Eh-kde"/>
+                    <navigationItem key="navigationItem" title="Settings" id="roq-Eh-kde"/>
                     <connections>
-                        <outlet property="goToYelp" destination="kJe-ki-D4J" id="PR9-ze-Tib"/>
+                        <outlet property="distanceSliderLabel" destination="YgL-1Z-um7" id="GUn-fA-7eJ"/>
                         <outlet property="mainHeaderLabel" destination="SdL-FV-qx9" id="hFa-xx-Jqd"/>
                         <outlet property="pickerView" destination="ylm-vQ-b0u" id="vXI-79-67H"/>
+                        <outlet property="resetPasswordButton" destination="e5y-xx-1f0" id="sXG-Mf-AiC"/>
+                        <outlet property="resetPasswordLabel" destination="qXc-lj-Mmp" id="JC2-dj-dvf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZsE-76-f0E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="713" y="895"/>
+            <point key="canvasLocation" x="1621.7391304347827" y="894.64285714285711"/>
         </scene>
         <!--Lodges Map Page-->
         <scene sceneID="SOP-hi-lih">
@@ -219,7 +254,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <state key="normal" title="Change Settings"/>
                                 <connections>
-                                    <segue destination="MWf-ca-ZIF" kind="show" id="qB7-zU-luY"/>
+                                    <segue destination="hbD-Rf-RB9" kind="show" id="qB7-zU-luY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -241,8 +276,8 @@
         <scene sceneID="1Jn-bH-S5y">
             <objects>
                 <tableViewController id="rwo-uY-SzW" customClass="yelpTableViewController" customModule="SnowTime" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Epa-bT-Cpi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Epa-bT-Cpi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <connections>
@@ -250,19 +285,38 @@
                             <outlet property="delegate" destination="rwo-uY-SzW" id="5Yi-SB-Kw5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="UJ2-wD-ZGG"/>
+                    <navigationItem key="navigationItem" id="cVF-Oy-taA"/>
                     <connections>
                         <outlet property="lodgesTableView" destination="Epa-bT-Cpi" id="5wG-Db-5vq"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dtN-4y-Sce" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1607" y="162"/>
+            <point key="canvasLocation" x="1604" y="108"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Sa4-Y4-zyU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hbD-Rf-RB9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="qLk-Mq-CHi"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bb6-xc-ha8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MWf-ca-ZIF" kind="relationship" relationship="rootViewController" id="KCk-In-V83"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UWx-sZ-Rme" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="711.59420289855075" y="894.64285714285711"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ovA-X5-7J2"/>
         <segue reference="qB7-zU-luY"/>
+        <segue reference="aSD-BD-yIa"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
 </document>

@@ -14,16 +14,27 @@ import CoreLocation
 
 class yelpTableViewController: UIViewController, MKMapViewDelegate {
     
-        @IBOutlet weak var lodgesTableView: UITableView!
+    // store var
+    var switchValue: String!
+    // pass index through for Mi or Km
+    func myCustomInit(switchValue: String){
+        self.switchValue = switchValue
+    }
+    @IBOutlet weak var lodgesTableView: UITableView!
         // insert Core data to set CPLat and long
     var locationManager = CLLocationManager()
     
-    //for image retrieval
+       //for image retrieval
     
         var lodge: [Lodge] = []
-          
+   // var pickerData: [pickerData] = []
+   // var stringDataForSortBy = "price"
           override func viewDidLoad() {
               super.viewDidLoad()
+            
+            
+            
+            //update picker label
             let CPLatitude = CLLocationDegrees()
             let CPLongitude = CLLocationDegrees()
             locationManager.requestWhenInUseAuthorization()
@@ -36,12 +47,13 @@ class yelpTableViewController: UIViewController, MKMapViewDelegate {
             }
             
             
+            
               lodgesTableView.delegate = self
               lodgesTableView.dataSource = self
               lodgesTableView.register(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: "customCell")
               lodgesTableView.separatorStyle = .none
               
-            retrieveLodges(latitude: CPLatitude, longitude: CPLongitude, category: "ski_Resorts", limit: 20, sortBy: /*filter[row]*/"price", locale: "en_US", address: "display_address", distance: "distance"/*, url: "url"*/) { (response, error) in
+            retrieveLodges(latitude: CPLatitude, longitude: CPLongitude, category: "ski_Resorts,Snowboarding", limit: 20, sortBy: "rating", locale: "en_US", address: "display_address", distance: "distance"/*, url: "url"*/) { (response, error) in
                               
                               if let response = response {
                                   self.lodge = response

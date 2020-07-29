@@ -12,6 +12,7 @@ import CoreLocation
  
 extension yelpTableViewController {
     
+
     func retrieveLodges(latitude: CLLocationDegrees,
                             longitude: CLLocationDegrees,
                             category: String,
@@ -50,34 +51,26 @@ extension yelpTableViewController {
             //businesses
             guard let businesses = resp.value(forKey: "businesses") as?
                 [NSDictionary] else { return }
-            
+    
             var lodgesList: [Lodge] = []
-            
             
             
             //accessing each business
             for business in businesses {
-                
-            //get distance and convert from meters to miles
-            let milesString = " Miles"
-            let distanceValue = business.value(forKey: distance)as? Double
-            let meterConversion = 0.000621371
-            let distanceValueMiles = distanceValue! * meterConversion
-            let distanceString = String(format: "%.2f", distanceValueMiles) + milesString
-                //let distanceString = "\((distanceValueMiles) )"
-            //String(format: "%0.2f", arguments:[business.value(forKey: "distance")])
-                
+        
+            // set each lodge value for the custom cells
             var lodges = Lodge()
+            
             lodges.name = business.value(forKey: "name") as? String
             lodges.rating = business.value(forKey: "rating") as? Float
             lodges.price = business.value(forKey: "price") as? String
-            lodges.distance = distanceString
+            lodges.distance = changeDistanceScale()
+                //business.value(forKey: "distance") as? String// this is where the function needs to spit out one of the switch values but they are currently "unidentified"
             let address = business.value(forKey: "location.display_address") as? [String]
             lodges.address = address?.joined(separator: "\n")
            // lodges.url = business.value(forKey: "url") as? String
                 
             lodgesList.append(lodges)
-                
             }
             
             completionHandler(lodgesList, nil)
@@ -88,6 +81,27 @@ extension yelpTableViewController {
             }
             }.resume()
             
+    
+
+    func changeDistanceScale (distanceInMeters,segment: UISegmentedControl) {
+    let KmString = " Km"
+    let meterToKmConversion = 10.0
+    let milesString = " Miles"
+    let meterToMileConversion = 0.000621371
+    let distanceValueMiles = distanceInMeters * meterToMileConversion
+    let distanceValueKm = distanceInMeters * meterToKmConversion
+           if self.switchValue == "Miles"{
+               //use miles conversion
+               let distanceStringMiles = String(format: "%.2f", distanceValueMiles) + milesString
+           }
+          else if self.switchValue == "Km" {
+               //use Km
+               let distanceStringKm = String (format: "%.2f", distanceValueKm) + KmString
+                              
+           } else {
+               print (self.switchValue!)
+           }
+       }
+
     }
 }
-

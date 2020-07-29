@@ -81,6 +81,7 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <accessibility key="accessibilityConfiguration" identifier="customCell"/>
                         <constraints>
                             <constraint firstItem="sfa-ij-28N" firstAttribute="baseline" secondItem="cGA-ke-Jh4" secondAttribute="baseline" id="08l-0S-PMD"/>
